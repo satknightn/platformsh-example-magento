@@ -113,8 +113,9 @@ hooks:
         /usr/bin/php ./vendor/platformsh/magento2-configuration/magento-build.php
     # We run deploy hook after your application has been deployed and started.
     deploy: |
-        cd ~//public
+        cd ~/public
         /usr/bin/php ./vendor/platformsh/magento2-configuration/magento-deploy.php
+
 # Default Magento 2 cron jobs
 crons:
     cronrun:
