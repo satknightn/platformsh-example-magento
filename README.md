@@ -1,6 +1,6 @@
-# Magento 2.0 Community Edition
+# Magento 2.0 Enterprise Edition
 
-This is a no-thrills example of a minimal repository to deploy a Magento 2 Community Edition instance on Platform.sh.
+This is a no-thrills example of a minimal repository to deploy a Magento 2 Enterprise Edition instance on Platform.sh.
 
 This example is based on using the Composer to build the site. You can see there is not much in terms of files comitted to this repository.
 
@@ -26,5 +26,5 @@ will be serving HTTP will be the one we called `php`.
 In `.platform/services.yaml` we say we want a MySQL instance, a Redis and a Solr. That would cover most basic Magento
 needs, right?
 
-The ``composer.json`` will fetch the Magento 2.0 Community Edition, and some configuration scripts to prepare your application
+The ``composer.json`` will fetch the Magento 2.0 Enterprise Edition, and some configuration scripts to prepare your application
 for Platform.sh.
