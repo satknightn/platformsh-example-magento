@@ -29,7 +29,7 @@ relationships:
 # The configuration of app when it is exposed to the web.
 web:
     # The public directory of the app, relative to its root.
-    document_root: "/"
+    document_root: "/public"
     # The front-controller script to send non-static requests to.
     passthru: "/index.php"
     whitelist:
@@ -109,21 +109,21 @@ mounts:
 hooks:
     # We run build hooks before your application has been packaged.
     build: |
-        cd ~/public
-        /usr/bin/php ./vendor/platformsh/magento2-configuration/magento-build.php
+        cd public
+        php ./vendor/platformsh/magento2-configuration/magento-build.php
     # We run deploy hook after your application has been deployed and started.
     deploy: |
-        cd ~/public
-        /usr/bin/php ./vendor/platformsh/magento2-configuration/magento-deploy.php
+        cd public
+        php ./vendor/platformsh/magento2-configuration/magento-deploy.php
 
 # Default Magento 2 cron jobs
 crons:
     cronrun:
         spec: "*/1 * * * *"
-        cmd: "cd ~/public ; /usr/bin/php bin/magento cron:run"
+        cmd: "cd public ; php bin/magento cron:run"
     cron:
         spec: "*/1 * * * *"
-        cmd: "cd ~/public ; /usr/bin/php update/cron.php"
+        cmd: "cd public ; php update/cron.php"
     cronsetup:
         spec: "*/1 * * * *"
-        cmd: "cd ~/public ; /usr/bin/php bin/magento setup:cron:run"
+        cmd: "cd public ; php bin/magento setup:cron:run"
