@@ -121,9 +121,3 @@ crons:
     cronrun:
         spec: "*/1 * * * *"
         cmd: "cd public ; php bin/magento cron:run"
-    cron:
-        spec: "*/1 * * * *"
-        cmd: "cd public ; php update/cron.php"
-    cronsetup:
-        spec: "*/1 * * * *"
-        cmd: "cd public ; php bin/magento setup:cron:run"
