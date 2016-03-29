@@ -8,8 +8,8 @@ mysql:
     disk: 2048
 
 redis:
-    type: redis
+    type: redis:3.0
 
 solr:
-    type: solr
+    type: solr:4.10
     disk: 1024
